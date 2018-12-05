@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 入口函数</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css">
+    <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <input type="button" id="btn" value="点击">
+    <script>
+        //DOM
+        // window.onload = function(){
+        //     var  btn = document.getElementById('btn');
+        //     btn.onclick = function(e){
+        //         alert(1);
+        //     }
+        // }
+
+        window.onload = function(){
+            console.log('onload');
+        }
+        // JQuery占用了两个全局变量一个是 $ 另一个是JQuery  $ == JQuery ;
+        $(function(){
+            //页面加载完成，自动执行；
+           console.log('ready');
+        })  //$是一个函数的对象 ，JQuery构造函数；
+        $(document).ready(function(){
+            console.log('ready');
+        })
+    </script>
+</body> 
+</html> 
